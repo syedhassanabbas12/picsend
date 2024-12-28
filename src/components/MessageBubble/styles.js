@@ -1,20 +1,20 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   messageBubble: {
-    maxWidth: '80%',
+    maxWidth: "80%",
     // backgroundColor: '#DCF8C6', // '#DCF8C6' for sent, '#FFFFFF' for received
     padding: 10,
     margin: 5,
     borderRadius: 10,
   },
-  time: {color: '#888', alignSelf: 'flex-end'},
+  time: { color: "#888", alignSelf: "flex-end" },
   sent: {
-    backgroundColor: '#DCF8C6', // '#DCF8C6' for sent, '#FFFFFF' for received
-    alignSelf: 'flex-end', // 'flex-end' for sent, 'flex-start' for received
+    backgroundColor: "#DCF8C6", // '#DCF8C6' for sent, '#FFFFFF' for received
+    alignSelf: "flex-end", // 'flex-end' for sent, 'flex-start' for received
   },
   received: {
-    backgroundColor: '#FFFFFF', // '#DCF8C6' for sent, '#FFFFFF' for received
-    alignSelf: 'flex-start', // 'flex-end' for sent, 'flex-start' for received
+    backgroundColor: "#FFFFFF", // '#DCF8C6' for sent, '#FFFFFF' for received
+    alignSelf: "flex-start", // 'flex-end' for sent, 'flex-start' for received
   },
   messageText: {
     // fontSize: 16,
@@ -24,6 +24,6 @@ export default StyleSheet.create({
     height: 150,
     borderRadius: 10,
     // marginTop: 5,
-    backgroundColor: 'black',
+    backgroundColor: "black",
   },
 });

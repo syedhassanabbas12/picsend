@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
-import {View, TextInput, StyleSheet} from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import React, { useState } from "react";
+import { View, TextInput, StyleSheet } from "react-native";
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import AntDesign from "react-native-vector-icons/AntDesign";
 
-const InputBox = ({onSend}) => {
-  const [message, setMessage] = useState('');
+const InputBox = ({ onSend }) => {
+  const [message, setMessage] = useState("");
 
   const handleSend = () => {
     console.warn(`Sending: ${message}`);
     if (message.trim()) {
       onSend(message);
-      setMessage('');
+      setMessage("");
     }
   };
 
@@ -36,12 +36,12 @@ const InputBox = ({onSend}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     padding: 5,
-    backgroundColor: 'whitesmoke', // light gray
+    backgroundColor: "whitesmoke", // light gray
     borderTopWidth: 1,
-    borderColor: '#ddd', // light gray
+    borderColor: "#ddd", // light gray
   },
   input: {
     flex: 1,
@@ -50,15 +50,15 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     borderRadius: 20,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#ddd', // light gray
-    backgroundColor: '#f9f9f9', // light gray
+    borderColor: "#ddd", // light gray
+    backgroundColor: "#f9f9f9", // light gray
   },
   sendButton: {
     marginHorizontal: 5,
-    backgroundColor: '#25D366', // WhatsApp Green
+    backgroundColor: "#25D366", // WhatsApp Green
     borderRadius: 20,
     padding: 7,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
 });
 

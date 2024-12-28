@@ -1,12 +1,12 @@
-import * as React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import * as React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Routes
-import NotImplementedScreen from '../screens/HomeScreen';
-import ChatScreen from '../screens/ChatScreen';
-import ChatListScreen from '../screens/ChatListScreen';
+import ChatScreen from "../screens/ChatScreen";
+import ChatListScreen from "../screens/ChatListScreen";
 // Tabs
-import MainTabNavigator from './MainTabNavigot';
+import MainTabNavigator from "./MainTabNavigot";
+import NotImplementedScreen from "../screens/NotImplementedScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +16,7 @@ export default function RootStack() {
       <Stack.Screen
         name="Home"
         component={MainTabNavigator}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen name="Status" component={NotImplementedScreen} />
       <Stack.Screen name="Calls" component={NotImplementedScreen} />

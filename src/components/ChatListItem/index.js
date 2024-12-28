@@ -1,12 +1,15 @@
-import React from 'react';
-import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-import dayjs from 'dayjs';
-dayjs.extend(require('dayjs/plugin/relativeTime'));
+import React from "react";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import dayjs from "dayjs";
+dayjs.extend(require("dayjs/plugin/relativeTime"));
 
-const ChatListItem = ({chat, onPress}) => {
+const ChatListItem = ({ chat, onPress }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={{uri: chat?.user?.image}} style={styles.profilePicture} />
+      <Image
+        source={{ uri: chat?.user?.image }}
+        style={styles.profilePicture}
+      />
       <View style={styles.textContainer}>
         <Text style={styles.name}>{chat?.user?.name}</Text>
         <Text style={styles.lastMessage}>{chat?.lastMessage?.text}</Text>
@@ -20,11 +23,11 @@ const ChatListItem = ({chat, onPress}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: "row",
     padding: 10,
-    alignItems: 'center',
+    alignItems: "center",
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: "#ccc",
     marginHorizontal: 10,
     marginVertical: 5,
   },
@@ -38,15 +41,15 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   name: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 16,
   },
   lastMessage: {
-    color: '#888',
+    color: "#888",
     marginTop: 2,
   },
   time: {
-    color: '#888',
+    color: "#888",
     fontSize: 12,
   },
 });

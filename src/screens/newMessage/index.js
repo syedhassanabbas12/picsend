@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react';
-import {View, Text, Platform, PermissionsAndroid} from 'react-native';
-import Contacts from 'react-native-contacts';
+import React, { useEffect, useState } from "react";
+import { View, Text, Platform, PermissionsAndroid } from "react-native";
+import Contacts from "react-native-contacts";
 
 const NewMessageScreen = () => {
   const [contacts, setContacts] = useState(null);
 
   useEffect(() => {
-    if (Platform.OS === 'android') {
+    if (Platform.OS === "android") {
       PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS, {
-        title: 'Contacts',
-        message: 'ContactsList app would like to access your contacts.',
-        buttonPositive: 'Accept',
-      }).then(value => {
-        if (value === 'granted') {
+        title: "Contacts",
+        message: "ContactsList app would like to access your contacts.",
+        buttonPositive: "Accept",
+      }).then((value) => {
+        if (value === "granted") {
           Contacts.getAll().then(setContacts);
         }
       });
@@ -30,13 +30,13 @@ const NewMessageScreen = () => {
   );
 };
 
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
