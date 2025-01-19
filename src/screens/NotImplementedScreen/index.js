@@ -5,7 +5,7 @@ import styles from "./styles";
 const NotImplementedScreen = () => {
   return (
     <View style={styles.root}>
-      <Text style={styles.title}>Not Implementeds Screen</Text>
+      <Text style={styles.title}>Not Implemented Screen</Text>
     </View>
   );
 };
